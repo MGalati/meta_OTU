@@ -30,7 +30,7 @@ done
 # run trimgalore
 
 OUT=trimgalore_nextera/
-mkdir -p  $OUT
+mkdir -p  ${OUT}
 
 for NAME in `awk '{print $1}' sample_names.tsv`
 do
@@ -70,10 +70,10 @@ cutadapt \
     --discard-untrimmed \
     -g NNNNCCTACGGGNBGCASCAG \
     -G NNNNGACTACNVGGGTATCTAATCC \
-    -o $OUT$NAME"_L001_R1_001.fastq.gz" \
-    -p $OUT$NAME"_L001_R2_001.fastq.gz" \
-    $IN$NAME*R1*.fastq.gz $IN$NAME*R2*.fastq.gz \
-	> $OUT$NAME"_cutadapt_log.txt"
+    -o ${OUT}${NAME}"_L001_R1_001.fastq.gz" \
+    -p ${OUT}${NAME}"_L001_R2_001.fastq.gz" \
+    ${IN}${NAME}*R1*.fastq.gz ${IN}${NAME}*R2*.fastq.gz \
+	> ${OUT}${NAME}"_cutadapt_log.txt"
 
 # rename samples to get RUN info and respect qiime2 input format
 # e.g., L2S357_15_L001_R1_001.fastq.gz
@@ -82,14 +82,14 @@ echo "###Cutadapter primers removal" $NAME "Done###"
 done
 
 /homedir/constancias/tools/parse_cutadapt_logs.py \
-       -i $OUT'/'*log.txt
+       -i ${OUT}'/'*log.txt
 
 source deactivate trimgalore
 source activate fastqc_multiqc
 
-mkdir $OUT'QC/'
-fastqc -t $NSOLTS $OUT*fastq* -o $OUT'QC/'
-multiqc $OUT'QC/' -o $OUT'QC/'
+mkdir ${OUT}'QC/'
+fastqc -t ${NSOLTS} ${OUT}*fastq* -o ${OUT}'QC/'
+multiqc ${OUT}'QC/' -o ${OUT}'QC/'
 
 
 
