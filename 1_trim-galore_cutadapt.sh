@@ -45,8 +45,8 @@ trim_galore --paired -q 0 --nextera \
 	-o $OUT
 done
 
-rename _val_1.fq.gz L001_R1_001.fastq.gz ${OUT}*gz
-rename _val_2.fq.gz L001_R2_001.fastq.gz ${OUT}*gz
+rename _val_1.fq.gz .fastq.gz ${OUT}*gz
+rename _val_2.fq.gz .fastq.gz ${OUT}*gz
 
 # rename samples to get RUN info and respect qiime2 input format
 # e.g., L2S357_15_L001_R1_001.fastq.gz
