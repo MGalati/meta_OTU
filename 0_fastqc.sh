@@ -18,9 +18,9 @@ source activate fastqc_multiqc
 
 for IN in BP CP DD IB II LU MC
 do
-mkdir $IN'qc/'
-fastqc -t $NSLOTS $IN*fastq* -o $IN'qc/'
-multiqc $IN'qc/' -o $IN'qc/'
+mkdir ${IN}/qc/
+fastqc -t $NSLOTS $IN*fastq* -o ${IN}/qc/
+multiqc ${IN}/qc/ -o ${IN}/qc/
 done
 
 
