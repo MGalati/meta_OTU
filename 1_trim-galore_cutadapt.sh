@@ -3,7 +3,7 @@
 #$ -q normal.q
 #$ -N trim-galore_cutadapt
 #$ -M florentin.constancias@cirad.fr
-#$ -pe parallel_smp 4
+#$ -pe parallel_smp 6
 #$ -l mem_free=6G
 #$ -V
 #$ -cwd
