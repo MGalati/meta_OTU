@@ -30,6 +30,8 @@ done
 
 ### Import sequences 
 # only sequences and properly formatted in the INPUT directory
+# in the following directories
+
 RUN1=BP
 RUN2=CP 
 RUN3=DD
