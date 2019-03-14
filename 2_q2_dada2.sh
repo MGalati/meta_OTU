@@ -84,7 +84,7 @@ do
 
 truncF=0
 truncL=220
-trimF=3
+trimF=0
 trimL=0
 maxee=2
 truncq=6
