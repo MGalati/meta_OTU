@@ -75,7 +75,7 @@ done
 #For multiple run https://docs.qiime2.org/2018.11/tutorials/fmt/
 
 # script run_dada_paired.R, modified to include
-# and minLen = 175, maxN = 0, 
+# minLen = 175, maxN = 0, 
 # dada(derepRs, selfConsist=TRUE, ..., MAX_CONSIST=20)
 # vim /home/florentin2/anaconda3/envs/qiime2-2018.11/bin/run_dada_paired.R to include
 
