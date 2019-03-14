@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #$ -q long.q
-#$ -N qiime2_dada2
+#$ -N 2_q2_dada2
 #$ -M florentin.constancias@cirad.fr
 #$ -pe parallel_smp 20
 #$ -l mem_free=6G
