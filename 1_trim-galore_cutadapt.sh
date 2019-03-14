@@ -70,13 +70,15 @@ cutadapt \
     --discard-untrimmed \
     -g NNNNCCTACGGGNBGCASCAG \
     -G NNNNGACTACNVGGGTATCTAATCC \
+    --max-n 0 \
+    --minimum-length 175 \ 
     -o ${OUT}${NAME}"_L001_R1_001.fastq.gz" \
     -p ${OUT}${NAME}"_L001_R2_001.fastq.gz" \
     ${IN}${NAME}*R1*.fastq.gz ${IN}${NAME}*R2*.fastq.gz \
 	> ${OUT}${NAME}"_cutadapt_log.txt"
 	
-#--max-n 0 \
-#--minimum-length 175 \ 
+#   --max-n 0 \
+#   --minimum-length 175 \ 
 # Dada2 can do it later but not within qiime2... so we might do it at this step
 
 # rename samples to get RUN info and respect qiime2 input format
