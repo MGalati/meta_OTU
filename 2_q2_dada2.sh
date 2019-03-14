@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #$ -q long.q
-#$ -N 2_q2_dada2
+#$ -N q2_dada2
 #$ -M florentin.constancias@cirad.fr
 #$ -pe parallel_smp 20
 #$ -l mem_free=6G
@@ -90,7 +90,10 @@ trimF=0
 trimL=0
 maxee=2
 truncq=6
-nreadslearn=6000000
+nreadslearn=100
+# pour tester
+
+#6000000
 #0 - Use all input reads 
 #1000000 default
 #1000000 working
