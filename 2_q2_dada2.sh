@@ -3,7 +3,7 @@
 #$ -q long.q
 #$ -N q2_dada2
 #$ -M florentin.constancias@cirad.fr
-#$ -pe parallel_smp 20
+#$ -pe parallel_smp 25
 #$ -l mem_free=6G
 #$ -V
 #$ -cwd
