@@ -89,14 +89,13 @@ truncL=220
 trimF=0
 trimL=0
 maxee=2
-truncq=6
-nreadslearn=100
+truncq=10
+nreadslearn=10000000
 # pour tester
 
 #6000000
 #0 - Use all input reads 
 #1000000 default
-#1000000 working
 #100000000 working
 #1000000000 working MSQ4 & MSQ6
 #100000000000 NOT working MSQ4
@@ -221,7 +220,7 @@ qiime phylogeny align-to-tree-mafft-fasttree \
 
 mkdir taxonomy
 
-for DB in silva_132_99_16S_majority_taxonomy_CCTACGGGNBGCASCAG_GACTACNVGGGTATCTAATCC_id0.85_ml350_Ml500
+for DB in silva_132_99_16S_majority_taxonomy_CCTACGGGNBGCASCAG_GACTACNVGGGTATCTAATCC_id0.85_ml350_Ml500 gg-13-8-99-nb-classifier
 #silva_132_99_16S_consensus_taxonomy_GTGCCAGCMGCCGCGGTAA_GGACTACHVGGGTWTCTAAT_id0.85_ml248_Ml257 silva_132_99_16S_consensus_taxonomy_GTGCCAGCMGCCGCGGTAA_GGACTACHVGGGTWTCTAAT_id0.8_ml210_Ml310 \
 #gg-13-8-99-515-806-nb-classifier gg-13-8-99-nb-classifier \
 #silva-132-99-515-806-nb-classifier silva-132-99-nb-classifier \
@@ -273,7 +272,7 @@ sed -i 's/#OTU ID/#OTUID/g' export/feature-table.biom.tsv
 # loop to test various taxonomic database - pour toi laisser juste silva123 - 
 # https://www.dropbox.com/s/5tckx2vhrmf3flp/silva-132-99-nb-classifier.qza?dl=0
 
-for DB in silva_132_99_16S_majority_taxonomy_CCTACGGGNBGCASCAG_GACTACNVGGGTATCTAATCC_id0.85_ml350_Ml500
+for DB in silva_132_99_16S_majority_taxonomy_CCTACGGGNBGCASCAG_GACTACNVGGGTATCTAATCC_id0.85_ml350_Ml500 gg-13-8-99-nb-classifier
 #silva_132_99_16S_consensus_taxonomy_GTGCCAGCMGCCGCGGTAA_GGACTACHVGGGTWTCTAAT_id0.85_ml248_Ml257 silva_132_99_16S_consensus_taxonomy_GTGCCAGCMGCCGCGGTAA_GGACTACHVGGGTWTCTAAT_id0.8_ml210_Ml310 \
 #gg-13-8-99-515-806-nb-classifier gg-13-8-99-nb-classifier \
 #silva-132-99-515-806-nb-classifier silva-132-99-nb-classifier \
